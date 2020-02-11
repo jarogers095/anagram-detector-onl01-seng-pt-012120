@@ -8,12 +8,13 @@ class Anagram
   
   def match(possible_anagrams)
     original_split_sort = @word.split("").sort
-    confirmed_anagrams = possible_anagrams.collect do |anagram|
+    confirmed_anagrams = []
+    possible_anagrams.each do |anagram|
       if original_split_sort == anagram.split("").sort
-        return anagram
+        possible_anagrams << anagram
       end
     end
+    
     return confirmed_anagrams
   end
-  
 end
