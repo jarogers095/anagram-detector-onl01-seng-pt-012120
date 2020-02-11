@@ -6,7 +6,7 @@ class Anagram
   end
   
   def match(anagrams)
-    return nil
+    return []
   end
   
 end
